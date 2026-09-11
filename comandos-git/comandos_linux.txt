@@ -1,1 +1,2 @@
 pwd: Muestra la ruta completa del directorio
+cd: Permite cambiar de directorios
