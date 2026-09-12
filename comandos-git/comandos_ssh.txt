@@ -1,0 +1,13 @@
+### Primer paso: Generar la llave ssh
+ssh-keygen -t ed25519 -C "marcell.llerenaai@gmail.com"
+
+### Segundo paso: Levantar el servicio SSH en Windows
+Get-Service -Name ssh-agent | Set-Service -StartupType Manual
+Start-Service ssh-agent
+
+### Tercer paso: Adicionar a mis llaves ssh, la llave generada en el paso 1
+ssh-add c:/Users/Marcell/.ssh/id_ed25519
+
+### Opcional: (Si es la primera vez que usan un token ssh)
+### Si en caso aparece un error de que no reconoce SSH TOKEN
+ssh -T git@github.com
