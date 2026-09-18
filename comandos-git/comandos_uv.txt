@@ -1,0 +1,10 @@
+# inicializa el proyecto python
+uv init --no-package fundamentos_python --python 3.14
+
+# añade librerías
+uv add ipykernel
+uv add pandas
+uv add numpy
+
+# ejecuta el script main.py
+uv run main.py
