@@ -11,6 +11,22 @@ from airflow.providers.standard.operators.bash import BashOperator
     tags=["ejercicio e1"]
 )
 def e1_hola():
-    pass
+    saludar = BashOperator(
+        task_id="saludar",
+        bash_command="echo 'Hola, Airflow'"
+    )
+
+    fecha = BashOperator(
+        task_id="fecha",
+        bash_command="echo 'Procesado el dia {{ ds }}'"
+    )
+
+    despedir = BashOperator(
+        task_id="despedir",
+        bash_command="echo 'Fin de ejecucion, dag-id: {{ dag.dag_id }}'"
+    )
+
+    saludar >> fecha >> despedir
+
 
 e1_hola()
