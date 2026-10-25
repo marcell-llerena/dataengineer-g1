@@ -35,3 +35,6 @@ deliverables
 # temp folders
 fundamentos_pandas_v2
 playground
+
+# Logs de Airflow (generados al correr los DAGs)
+fundamentos_airflow/logs/
