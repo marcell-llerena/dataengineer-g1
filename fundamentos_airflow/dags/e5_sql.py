@@ -17,7 +17,9 @@ def e5_sql():
     crear = SQLExecuteQueryOperator(
         task_id="crear_tabla",
         conn_id="postgres_dwh",
-        sql="CREATE TABLE IF NOT EXISTS clientes(id INT PRIMARY KEY, nombre TEXT, ciudad TEXT)"
+        sql="""
+        CREATE TABLE IF NOT EXISTS
+        clientes(id INT PRIMARY KEY, nombre TEXT, ciudad TEXT)"""
     )
 
     insertar = SQLExecuteQueryOperator(
