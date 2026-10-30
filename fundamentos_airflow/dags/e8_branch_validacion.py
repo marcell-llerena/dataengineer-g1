@@ -39,8 +39,10 @@ def elegir_rama(nombre: str) -> str:
     return "procesar"
 
 
+# https://crontab.cronhub.io/
+# Configurar scheduler u horario de disparo
 @dag(
-    schedule=None,
+    schedule="*/5 10 * * *",
     start_date=datetime(2026, 10, 23),
     catchup=False,
     max_active_runs=1,
