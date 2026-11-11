@@ -38,3 +38,6 @@ playground
 
 # Logs de Airflow (generados al correr los DAGs)
 fundamentos_airflow/logs/
+
+# credentials
+credentials/
