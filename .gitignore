@@ -41,3 +41,5 @@ fundamentos_airflow/logs/
 
 # credentials
 credentials/
+temp/
+playground/
