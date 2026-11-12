@@ -1,0 +1,5 @@
+# Logs de Airflow (se generan al ejecutar los DAGs)
+logs/
+
+# Variables de entorno con la Connection de AWS (el .gitignore de la raíz también lo ignora)
+.env
