@@ -119,8 +119,7 @@ def comparar_con_reporte(reporte: pd.DataFrame, nube: pd.DataFrame) -> pd.DataFr
     catchup=True,
     max_active_runs=1,                 # un día a la vez: el Glue Job admite 1 ejecución concurrente
     default_args={"retries": 1, "retry_delay": timedelta(seconds=30)},
-    doc_md=__doc__,
-    tags=["aws", "s3", "glue", "athena"],
+
 )
 def ventas_diarias_aws():
 
@@ -133,7 +132,7 @@ def ventas_diarias_aws():
         sts: Any = AwsBaseHook(aws_conn_id=AWS_CONN, client_type="sts").conn
         print("Trabajando como:", sts.get_caller_identity()["Arn"])   # el "hola mundo" del notebook 01
 
-        if not BUCKET or BUCKET == "de-tecsup-tualias":
+        if not BUCKET:
             raise AirflowFailException("Define AWS_BUCKET en el archivo .env con el nombre de tu bucket")
         if not S3Hook(aws_conn_id=AWS_CONN).check_for_bucket(BUCKET):
             raise AirflowFailException(f"No existe el bucket {BUCKET} (o no es tuyo): ejecuta el notebook 01")
