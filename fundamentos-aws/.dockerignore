@@ -1,0 +1,9 @@
+# La imagen solo necesita el Dockerfile: dags, datos y script se montan como volúmenes.
+# Sobre todo, las credenciales NUNCA deben entrar al contexto de build.
+credentials
+.env
+.venv
+data
+logs
+notebooks
+**/__pycache__
