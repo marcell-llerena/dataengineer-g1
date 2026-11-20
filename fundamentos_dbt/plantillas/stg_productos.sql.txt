@@ -1,0 +1,3 @@
+select
+    -- TODO: producto_id entero, producto con initcap, categoria en minúsculas
+from {{ source('tienda', 'productos') }}

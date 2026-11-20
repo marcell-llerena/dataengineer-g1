@@ -1,0 +1,4 @@
+select
+    cast(id_cliente as integer) as cliente_id,
+    -- TODO: normalizar nombre, conservar DNI textual, normalizar ciudad
+from {{ source('tienda', 'clientes') }}

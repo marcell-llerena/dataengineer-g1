@@ -43,3 +43,8 @@ fundamentos_airflow/logs/
 credentials/
 temp/
 playground/
+
+# dbt
+env.sh
+logs/
+.user.yml

@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: tienda
+    database: "{{ target.catalog }}"
+    schema: "{{ env_var('DBT_RAW_SCHEMA', 'taller_dbt_raw') }}"
+    tables:
+      - name: clientes
+      # TODO: agregar productos y ventas

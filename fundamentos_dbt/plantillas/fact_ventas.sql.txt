@@ -1,0 +1,5 @@
+select
+    linea_id, venta_id, fecha, cliente_id, producto_id,
+    cantidad, precio_unitario, descuento_pct, estado,
+    -- TODO: venta_bruta, descuento monetario y venta_neta
+from {{ ref('stg_ventas') }}

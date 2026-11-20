@@ -1,0 +1,5 @@
+select
+    cast(date_trunc('month', fecha) as date) as mes,
+    -- TODO: ventas_pagadas distintas, unidades y venta_neta
+from {{ ref('fact_ventas') }}
+-- TODO: filtrar pagadas y agrupar por mes

@@ -1,0 +1,14 @@
+name: taller_ventas
+version: '1.0.0'
+config-version: 2
+profile: taller_ventas
+model-paths: [models]
+test-paths: [tests]
+clean-targets: [target, dbt_packages]
+models:
+  taller_ventas:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table
+      +file_format: delta

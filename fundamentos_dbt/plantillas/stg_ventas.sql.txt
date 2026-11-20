@@ -1,0 +1,5 @@
+select
+    cast(id_linea as integer) as linea_id,
+    -- TODO: venta_id, fecha, cliente_id, producto_id, cantidad,
+    -- precio_unitario, descuento_pct y estado
+from {{ source('tienda', 'ventas') }}
