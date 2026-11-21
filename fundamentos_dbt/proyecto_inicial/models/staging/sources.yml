@@ -1,0 +1,12 @@
+version: 2
+sources:
+  - name: tienda                  # nombre lógico
+    database: "{{ env_var('DBT_DATABRICKS_CATALOG', 'workspace')  }}"
+    schema: "{{ env_var('DBT_RAW_SCHEMA', 'taller_dbt_raw')  }}"            # esquema físico
+    tables:
+      - name: clientes
+        description: Clientes tal cual llegan de la extracción
+      - name: productos
+        description: Productos tal cual llegan de la extracción
+      - name: ventas
+        description: Ventas tal cual llegan de la extracción
