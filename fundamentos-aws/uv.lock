@@ -159,10 +159,11 @@ wheels = [
 [[package]]
 name = "fundamentos-aws"
 version = "0.1.0"
-source = { editable = "." }
+source = { virtual = "." }
 dependencies = [
     { name = "boto3" },
     { name = "ipykernel" },
+    { name = "numpy" },
     { name = "pandas" },
     { name = "pyarrow" },
 ]
@@ -171,6 +172,7 @@ dependencies = [
 requires-dist = [
     { name = "boto3", specifier = ">=1.43.126" },
     { name = "ipykernel", specifier = ">=7.4.0" },
+    { name = "numpy", specifier = ">=2.5.4" },
     { name = "pandas", specifier = ">=3.1.1" },
     { name = "pyarrow", specifier = ">=26.0.1" },
 ]
